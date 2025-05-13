@@ -1,0 +1,20 @@
+
+services:
+  - type: web
+    name: crazy-v3
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: BOT_NAME
+        value: CRAZY-V3
+      - key: OWNER_NAME
+        value: CRAZY DEV
+      - key: PREFIX
+        value: "."
+      - key: MODE
+        value: public
+    autoDeploy: true
