@@ -3,18 +3,12 @@ services:
   - type: web
     name: crazy-v3
     env: node
-    plan: free
+    repo: https://github.com/DavidTechInc/CRAZY-V3
+    branch: main
     buildCommand: npm install
-    startCommand: node index.js
+    startCommand: npm start
     envVars:
       - key: NODE_ENV
         value: production
-      - key: BOT_NAME
-        value: CRAZY-V3
-      - key: OWNER_NAME
-        value: CRAZY DEV
-      - key: PREFIX
-        value: "."
-      - key: MODE
-        value: public
     autoDeploy: true
+```
